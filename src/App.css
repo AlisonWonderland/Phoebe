@@ -1,0 +1,429 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+body { 
+    font-family: 'Roboto', sans-serif;
+    background-color: #0b3d37;
+    color: #ecf1f0;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 200;
+    padding: 5px 0px;
+}
+
+  #drop-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 520px;
+    height: 190px;
+    font-family: sans-serif;
+    margin: 100px auto 20px auto;
+    padding: 20px;
+  }
+  .drop-area.highlight {
+    border-color: #F9F871;
+  }
+  p {
+    margin-top: 0;
+  }
+  .my-form {
+    margin-bottom: 10px;
+  }
+  #gallery {
+    margin-top: 10px;
+  }
+  #gallery img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px;
+    background: #ecf1f0;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ecf1f0;
+    margin-top: 10px;
+  }
+  .button:hover {
+    background: #ddd;
+  }
+  #fileElem {
+    display: none;
+  }
+
+.thinFont {
+    font-weight: 100;
+}
+
+.thinFont {
+    font-weight: 300;
+}
+
+.thinFont {
+    font-weight: 400;
+}
+
+.App {
+  text-align: center;
+}
+
+.home {
+    padding-bottom: 50px;
+    position: relative;
+    min-height: 100vh;
+}
+
+.footer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+}
+
+.fa-github {
+    font-size: 5em;
+    color: #F9F871;
+}
+
+.fa-info-circle {
+    position: relative;
+    display: inline-block;
+}
+
+.fa-info-circle .hoverText {
+    visibility: hidden;
+    font-family: 'Roboto';
+    font-weight: 200;
+    text-align: left;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    width: 400px;
+    font-size: 13px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    margin-left: -210px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.fa-info-circle .hoverText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.fa-info-circle:hover .hoverText {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar {
+    height: 60px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navLeft {
+    font-size: 30px;
+}
+
+#navRight {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.section:last-of-type {
+    margin-bottom: 50px;
+}
+
+.instructHeaders {
+    display: inline-block;
+    text-align: left;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.description {
+    width: 300px;
+}
+
+.descriptionText {
+    display: block;
+    font-size: 18px;
+    font-weight: 300;
+    overflow-wrap: break-word;
+}
+
+.screenshots {
+    height: 400px;
+    width: 550px;
+}
+
+.screenshots > img {
+    height: inherit;
+    width: inherit;
+    object-fit: contain;
+}
+
+#textGrabber {
+    min-height: 100vh;
+    position: relative;
+}
+
+.filesList {
+    font-size: 18px;
+}
+
+.accordion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    color: #444;
+}
+
+.accordionToggle {
+    background-color: #eee;
+    cursor: pointer;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    outline: none;
+    transition: background-color 0.6s ease;
+}
+
+.active, .accordionToggle:hover {
+    background-color: #ccc;
+}
+
+.accordionTitle {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: inherit;
+}
+
+.accordionContent {
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.accordionText {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 18px;
+    text-align: left;
+}
+
+.confidence {
+    align-self: flex-end;
+    padding: 10px 15px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.confidenceTitle {
+    
+}
+
+#uploadContainer {
+    padding-top: 50px;
+    padding-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.loadingContainer {
+    display: flex;
+    /* flex-grow: 0; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modifyTextContainer {
+    display: inline-block;
+    margin-top: 50px;
+    width: 80%;
+}
+
+.modifyText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.modifyText > textarea {
+    width: 100%;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.4;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.sectionTitle {
+    align-self: flex-start;
+}
+
+.downloadBtn { 
+    align-self: flex-end;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #00C385;
+    box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
+    padding: 15px;
+    margin: 25px 0px;
+    border: none;
+}
+
+.downloadBtn:hover {
+    background-color: #03fbac;
+}
+
+@media only screen and (max-width: 1250px) {
+    .screenshots {
+        height: 50%;
+        width: 55%;
+    }
+    .section {
+        padding: 10px 0px;
+    }
+    .instructHeaders {
+        font-size: 40px;
+    }
+    .descriptionText {
+
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .screenshots {
+        height: 40%;
+        width: 45%;
+    }
+    .section {
+        padding: 25px 0px;
+    }
+    .instructHeaders {
+        font-size: 32px;
+    }
+    .descriptionText {
+        font-size: 16px;
+    }
+    #drop-area, .modifyTextContainer {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .screenshots {
+        height: 40%;
+        width: 45%;
+    }
+    .section {
+        margin: 25px 0px;
+    }
+    .instructHeaders {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .screenshots {
+        height: 40%;
+        width: 45%;
+    }
+    .section {
+        margin: 25px 0px;
+    }
+    .instructHeaders {
+        font-size: 24px;
+    }
+    .descriptionText {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #drop-area, .modifyTextContainer {
+        width: 95%;
+    }
+}
+
+.homeLink {
+    font-size: 20px;
+    color: lightblue;
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%
+}
+
+.errorContainer {
+    background: #ed072a;
+    padding: 5px 30px;
+    text-align: center;
+    color: #ffffee;
+    font-size: 32px;
+}
+
+.errorText {
+    color: #ffffee;
+    font-size: 32px;
+}
